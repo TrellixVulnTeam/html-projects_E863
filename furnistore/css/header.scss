@@ -1,0 +1,416 @@
+.top {
+    width: 100%;
+    background-color: #f5f5f5;
+    &__row {
+        max-width: 1240px;
+        margin: auto;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 426px) {
+            display: none;
+        }
+}
+    
+
+    &__text span {
+        font-weight: 700;
+    }
+
+    &__info {
+        display: flex;
+        @media (max-width: 800px) {
+            flex-direction: column;
+        }
+    }
+
+    &__date {
+        border-right: 1px solid #0000002b;
+        padding-right: 10px;
+        margin-right: 10px;
+        @media (max-width: 800px) {
+            border-right: none;
+        }
+    }
+    &__tel {
+        color: #000;
+    }
+}
+
+
+
+
+
+
+.menu {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 20px 35px 20px;
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+        @media (max-width: 767px) {
+            justify-content: center;
+            margin: 0 0 20px 0;
+        }
+    }
+    &__navigation {
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+    &__navigation-mobile {
+        @media (max-width: 767px) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background-color: #fff;
+            overflow: auto;
+            z-index: 10;
+        }
+    }
+    &__ul-mobile {
+        @media (max-width: 767px) {
+            padding: 20px 20px 0 20px;
+            flex-direction: column;
+        }
+    }
+    &__ul {
+        display: flex;
+    }
+    &__ul li {
+        position: relative;
+    }
+    &__ul li:hover {
+        .sub__menu-ul {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__navigation ul li {
+        margin: 0 15px 0 0;
+        letter-spacing: 1px;
+        font-weight: 300;
+        cursor: pointer;
+        // position: relative;
+        a {
+            color: #000;
+        }
+    }
+
+    &__ul-mobile li {
+        @media (max-width: 767px) {
+            margin: 0 0 20px 0;
+            & a {
+                color: #000;
+                display: block;
+            }
+        }
+    }
+    &__li {
+        @media (max-width: 767px) {
+            background: url(https://assets3.insales.ru/assets/1/3687/1412711/1593593826/arrow.svg) center right no-repeat transparent;
+        }
+    }
+    &__icons {
+        display: flex;
+        align-items: center;
+    }
+
+    &__ul-loaded {
+        transform: translateX(350px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px 20px 0 20px;
+        z-index: 10;
+        background: #ffffff;
+        transition: 0.3s;
+        li {
+            margin: 0 0 20px 0;
+        }
+        a {
+            color: #000;
+        }
+    }
+    &__ul-loaded.loaded {
+        transform: translateX(0px);
+    }
+}
+
+.menu__ul > li:hover::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: #000;
+    bottom: -7px;
+    left: 0;
+    transition: 0.5s ease 0.3s;
+}
+
+.menu__ul > li:last-child {
+    margin: 0;
+}
+
+.back {
+    img {
+        width: 20px;
+    }
+}
+
+.sub {
+    &__menu-ul {
+        flex-direction: column;
+        box-shadow: -2px 2px 81px -27px rgb(0 0 0 / 30%);
+        min-width: 250px;
+        position: absolute;
+        z-index: 1000;
+        z-index: 15;
+        visibility: hidden;
+        opacity: 0;
+        top: 100%;
+        left: 0;
+        display: block;
+        transition: 0.4s;
+        transition-property: all;
+    }
+   
+    &__menu-ul li:hover {
+        .sub-sub__menu-ul {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+     
+
+    &__menu-link {
+        display: flex;
+        align-items: center;
+        padding: 10px 40px 10px 30px;
+        justify-content: start;
+    }
+    &__menu-img {
+        width: 35px;
+        float: left;
+        height: 35px;
+        margin-right: 15px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__menu-img img {
+        max-width: 100%;
+    }
+    &__menu-i {
+        display: inline-block;
+        position: absolute !important;
+        right: 25px;
+        margin: 0;
+    }
+
+    &__menu-ul li {
+        width: 100%;
+        display: inline-block;
+        transition-duration: 0.3s;
+        position: relative;
+        background-color: #fff;
+    }
+}
+
+.sub-sub {
+    &__menu-ul {
+        flex-direction: column;
+        top: 0;
+        left: 100%;
+        box-shadow: -2px 2px 81px -27px rgb(0 0 0 / 30%);
+        min-width: 250px;
+        position: absolute;
+        z-index: 1000;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.4s;
+        transition-property: all;
+    }
+    &__menu-ul li {
+        padding: 10px 0 0 0;
+    }
+    &__menu-ul li:last-child {
+        padding-bottom: 10px;
+    }
+
+    &__menu-link {
+        padding: 10px 30px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.overlay {
+    display: block;
+    cursor: pointer;
+    z-index: 8;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+}
+
+.logo {
+    font-size: 24px;
+    color: #000;
+    margin: 0 30px 0 0;
+    @media (max-width: 480px) {
+        margin: 0;
+    }
+}
+
+.header__burger {
+    display: none;
+    @media (max-width: 767px) {
+        & {
+            display: block;
+            position: relative;
+            width: 25px;
+            height: 20px;
+            z-index: 3;
+          }
+          & span {
+            position: absolute;
+            background-color: #000;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            top: 9px;
+            transition: all 0.3s ease 0s;
+          }
+          &::before,
+          &::after {
+                content: "";
+                background-color: #000;
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                left: 0;
+                transition: all 0.3s ease 0s;
+            }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+     }
+     &-text {
+        @media (max-width: 767px) {
+            margin: 0 0 0 40px;
+        }
+     }
+  }
+
+  .header__row-mobile {
+    @media (max-width: 767px) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+  }
+
+
+
+
+.icon {
+    position: relative;
+}
+.icon-total {
+    position: absolute;
+    top: -6px;
+    right: -12px;
+}
+.icon-count {
+    display: inline-block;
+    padding: 2px 4px;
+    color: #ffffff;
+    background: #4a4a4a;
+    min-width: 19px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 12px;
+}
+
+.icon,
+.icon img {
+    width: 20px;
+    height: 20px;
+    margin: 0 20px 0 0;
+    cursor: pointer;
+}
+.icon:last-child {
+    margin: 0;
+}
+
+.fa-shopping-cart {
+    font-size: 18px;
+}
+
+.basket-hidden {
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.basket-icon:hover {
+    .basket__list-hidden {
+        visibility: visible;
+        opacity: 1;
+        top: 100%;
+    }
+}
+.basket-icon:hover {
+    color: #000;
+}
+
+.basket-dropdown {
+    display: block;
+    position: absolute;
+    right: -1px;
+    background-color: #fff;
+    width: 350px;
+    box-shadow: 0px 2px 10px #0000001f;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 200ms linear;
+    transition-property: top, opacity, visibility;
+    padding: 20px;
+    top: 90%;
+}
+
+.basket__list-title {
+    color: #000;
+}
+
+.notice {
+    padding: 10px 0 10px 0;
+    line-height: 1.3;
+    color: #000;
+}

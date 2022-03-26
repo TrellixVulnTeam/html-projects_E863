@@ -1,0 +1,305 @@
+.collection {
+    &__sidebar {
+        position: sticky;
+        top: 50px;
+        width: 25%;
+        @media (max-width: 767px) {
+            position: fixed;
+            top: 10%;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: none;
+            z-index: 100;
+            background-color: #fff;
+            border-right: 1px solid #eeeeee;
+            overflow-y: scroll;
+            padding: 20px;
+        }
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    &__row-price {
+        margin: 0 0 20px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__catalog {
+        width: 75%;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 35px;
+        display: inline-block;
+        width: 100%;
+        margin: 0 0 30px 0;
+        font-weight: 300;
+        padding: 0 0 0 20px;
+        @media (max-width:425px) {
+            padding: 0;
+        }
+    }
+    &__product-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__panel-row {
+        border-top: 1px solid #eeeeee;
+        padding: 20px 0;
+        width: 100%;
+    }
+}
+
+.wrap {
+    padding: 30px;
+    max-width: 100%;
+}
+
+.sidebar {
+    &__block {
+        margin: 0 0 30px 0;
+        &-title {
+            color: #333333;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            position: relative;
+            width: 100%;
+            display: inline-block;
+        }
+        &-title::after {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: #ccc;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &-btn {
+        display: none;
+        width: 100%;
+        @media (max-width:767px) {
+            display: block;
+        }
+    }
+}
+
+.filter {
+    &__section {
+        display: block;
+        padding: 5px 0;
+        margin: 3px 0;
+        position: relative;
+        &-title {
+            line-height: 35px;
+            height: 35px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-toggler {
+            width: 27px;
+            height: 27px;
+            line-height: 27px;
+            cursor: pointer;
+        }
+        &-values {
+            padding-bottom: 0.5em;
+            margin: 20px 0 1px 0;
+        }
+        &-value {
+            position: relative;
+            padding: 0 0 10px;
+            line-height: 1.2;
+            display: flex;
+            &_input {
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+                -webkit-appearance: checkbox;
+                border: 1px solid 	#343434;
+            }
+            &_link {
+                display: block;
+                font-size: 14px;
+                color: inherit;
+            }
+        }
+        &-value-range {
+            margin: 30px 15px;
+        }
+        &-range_input {
+            padding: 8px;
+            width: 70px;
+            border: 1px solid #eeeeee;
+            line-height: 1.2;
+            font-size: 14px;
+            text-align: center;
+            display: inline-block;
+        }
+    }
+}
+
+.noUi {
+    &__background {
+        background: #FAFAFA;
+    }
+    &__horizontal {
+        height: 5px;
+    }
+    &__base {
+        transform: translate3d(0, 0, 0);
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    &__origin {
+        border-radius: 2px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+    &__connect {
+        background: #eee;
+        transition: background 450ms;
+    }
+    &__handle {
+        width: 20px;
+        height: 20px;
+        left: -15px;
+        top: -8px;
+        background: #fff;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 2px solid #4a4a4a;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.price {
+    &-width {
+        width: 50%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &-left {
+        text-align: left;
+    }
+    &-right {
+        text-align: right;
+    }
+}
+
+
+.breadcrumbs {
+    margin: 0 0 25px 0;
+    line-height: 1.4;
+    font-size: 14px;
+    padding: 0 0 0 20px;
+    @media (max-width:425px) {
+    // padding: 0;
+    }
+    &__page {
+        color: #999;
+    }
+
+    &__page-home {
+        color: #000;
+        padding: 0 2px 0 0;
+    }
+
+    &__pipe {
+        padding: 0 5px;
+    }
+}
+
+
+.sort__by {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 20px;
+    @media (max-width:425px) {
+        padding: 0;
+    }
+    &-option {
+        display: flex;
+        line-height: 28px;
+    }
+    &-label {
+        border: 1px solid transparent;
+        margin: 0 10px 0 0;
+        @media (max-width: 590px) {
+            display: none;
+        }
+    }
+    &-select-wrapper {
+        min-width: 50px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+    &-select {
+        cursor: pointer;
+        line-height: 28px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        background-color: #fff;
+        // -webkit-appearance: none;
+    }
+}
+
+.page__size {
+    padding: 0 25px 0 0;
+    cursor: pointer;
+    background-color: #fff;
+
+}
+
+.card-w {
+    width: 33.3333%;
+    padding: 0 0 0 20px;
+    @media (max-width: 850px) {
+        width: 50%;
+    }
+    @media (min-width:400px) and (max-width:425px) {
+        padding: 0 10px 0 0;
+    }
+    @media (max-width: 400px) {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.notice-block {
+    margin: 0 0 0 20px;
+
+}
+.notice-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    padding: 10px;
+    width: 100%;
+}
+

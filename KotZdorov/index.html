@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&amp;display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КотЗдоров</title>
+    <link rel="icon" href="img/kotzdorov-logo.svg" type="image">
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="header__body">
+                <div class="header__logo">
+                    <a href=""><img src="img/kotzdorov-logo.svg" alt="logo"></a>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__navigation">
+                        <li class="li-header"><a class="a-menu" href="services.html">услуги</a></li>
+                        <li class="li-header"><a class="a-menu" href="team.html">команда</a></li>
+                        <li class="li-header"><a class="a-menu" href="partners.html">партнёры</a></li>
+                        <li class="li-header"><a class="a-menu" href="contacts.html">контакты</a></li>
+                        <p class="li-header hover-head"><a class="tel"
+                                href="tel:+74953247247">+7&nbsp;495&nbsp;3&nbsp;247&nbsp;247</a></p>
+                    </ul>
+                </nav>
+                <div class="header__burger-block">
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                    <a class="header__login hover-head" href="javascript:PopUpShow()">Войти</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="main page">
+        <div class="main__bg">
+            <section class="main__wrap wrap">
+                <div class="main__content">
+                    <div class="main__logo big-logo">
+                        <img src="img/kotzdorov-logo.svg" alt="logo">
+                    </div>
+                    <h1 class="main__title big-title">КотЗдоров</h1>
+                    <p class="main__text text">Круглосуточная ветеринарная онлайн-помощь для Вашего любимца</p>
+                    <div class="main__input">
+                        <form class="main__form" action="">
+                            <label class="form__label text" for="tel">Введите свой номер телефона</label>
+                            <input class="form__tel" type="tel" name="tel" id="tel" placeholder="+7 (999) 999 - 9999">
+                            <input class="form__submit" type="submit" value="Консультация от 599 Р">
+                        </form>
+                    </div>
+                    <p class="main__small-text small-text">
+                        &ast;Нажимая на кнопку «Консультация от 599 Р», Вы соглашаетесь с
+                        <span class="main__span"><a href="/terms" target="_blank">Условиями пользовательского
+                                соглашения</a></span> по
+                        предоставлению услуг и даёте согласие на <span class="main__span"><a href="/personal-data"
+                                target="_blank">обработку персональных данных</a></span>,в соответствии с Федеральным
+                        законом от 27.07.2006 года №152-ФЗ «О персональных данных».<br>Консультация проводится
+                        ветеринарными врачами ООО «Кот и Пес».
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <div class="popup" id="popup1">
+        <div class="popup__wrap">
+            <div class="popup__content">
+                <button class="popup__btn">×
+                </button>
+                <div class="popup__text">Войти</div>
+                <form class="popup__form" action="">
+                    <label class="popup__form-label" for="tel">Вход по номеру телефона</label>
+                    <input class="popup__tel" type="tel" name="tel" id="tel" placeholder="+7 (999) 999 - 9999">
+                    <input class="popup__submit" type="submit" value="Вход">
+                </form>
+                <a href="/auth/login">Вход по логину и паролю</a>
+            </div>
+        </div>
+        <div class="overlay" id="overlay" style="display: none;"></div>
+    </div>
+
+    <div class="cookie">
+        <div class="cookie__wrap">
+            <p>Этот веб-сайт использует файлы cookie для улучшения функциональности и результатов работы,
+                отображения
+                актуальных для вас коммерческих сообщений и сбора статистических данных. Оставаясь на этом сайте, вы
+                соглашаетесь на использование сохраняемых на вашем устройстве файлов cookie и на обработку ваших
+                персональных данных. Более подробную информацию см. в нашей
+                <a class="cookie__href" href="/personal-data" target="_blank">Политике использования файлов
+                    cookie</a>
+            </p>
+            <a class="cookie__btn" href="" id="">Я согласен</a>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

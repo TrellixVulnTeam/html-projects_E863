@@ -1,0 +1,12 @@
+.cart__wrap {
+  padding: 70px;
+  max-width: 100%;
+}
+.cart__title {
+  font-size: 35px;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 30px;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+}
