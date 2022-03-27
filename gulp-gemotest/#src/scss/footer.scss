@@ -1,0 +1,93 @@
+$mainColor: #1f2229;
+$fontFamilyMain: 'Tele2DisplaySerif';
+$fontFamilyOther: 'tele2_textsans';
+
+
+
+.footer {
+    background-color: $mainColor;
+    padding: 30px 0;
+
+    &__wrap {
+    }
+
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__links {
+    }
+
+    &__text {
+        font-family: $fontFamilyOther;
+        color: #8f9399;
+        font-size: 12px;
+        line-height: 120%;
+    }
+
+    &__p {
+        &:not(:last-child) {
+            margin: 0 0 15px 0;
+        }
+        a {
+            color: #8f9399;
+            text-decoration: underline;
+        }
+    }
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:last-child) {
+        margin: 0 0 30px 0;
+    }
+
+    @media (max-width: 767.98px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 767.98px) {
+            &:not(:last-child) {
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+
+
+    &__tel {
+        font-family: $fontFamilyOther;
+        font-weight: 600;
+        @include adaptive-value("font-size", 32, 16, 1);
+        line-height: 120%;
+        color: #fff;
+    }
+
+    &__text {
+        font-family: $fontFamilyOther;
+        color: #8f9399;
+    }
+
+    &__link {
+        a {
+            color: #fff;
+            font-family: $fontFamilyOther;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        @media (max-width: 767.98px) {
+            &:not(:last-child) {
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+}

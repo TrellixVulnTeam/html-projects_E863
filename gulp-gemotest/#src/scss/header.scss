@@ -1,0 +1,42 @@
+.header {
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 80px;
+        position: relative;
+        padding: 15px 0;
+        @media (max-width: 767.98px) {
+            min-height: 50px;
+        }
+    }
+
+    &__logo {
+        width: 84px;
+        object-fit: contain;
+        object-position: center; 
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__number {
+    }
+}
+.number-header {
+
+    &__tel {
+        font-family: 'tele2_textsans';
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 700;
+        color: #1f2229;
+    }
+
+    &__text {
+        font-family: 'tele2_textsans';
+        line-height: 20px;
+        color: #8f9399;
+    }
+}
